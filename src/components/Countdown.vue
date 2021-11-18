@@ -29,7 +29,7 @@ export default {
     name:"Countdown",
     data(){
         return{
-            countTime:new Date('Sep 05, 2021 00:00:00').getTime(),
+            countTime:new Date('Dec 31, 2021 00:00:00').getTime(),
             days:"00",
             hours:"00",
             minutes:"00",

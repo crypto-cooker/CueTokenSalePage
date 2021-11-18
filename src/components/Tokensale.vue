@@ -1,7 +1,6 @@
 <template>
   <div class="bg-gray-100">
     <div class="relative">
-      <Toptext />
       <transition name="fade">
         <div class="fixed inset-x-0 top-0 m-auto mt-4 flex items-center bg-red-500 text-white text-sm font-bold px-4 py-3 lg:w-2/6 rounded" role="alert" v-if="alertShow">
           <p>{{alertMsg}}</p>
@@ -14,7 +13,7 @@
                 style="height:38px"
                 @click="claimToken"
                 >
-          <span  class="lg:block">{{ this.claimableAmount }} ETHX</span>
+          <span  class="lg:block">{{ this.claimableAmount }} CUE</span>
         </button>
         <div class="relative inline-block text-left">
           <div>
@@ -80,10 +79,10 @@
     </div>
 
     <section class="container max-w-screen-lg mx-auto py-2">
-      <img class="mx-auto h-64" src="../assets/img/logo/ethereumX-logo.svg" alt="screenshot">
+      <img class="mx-auto h-64" src="../assets/img/logo/coin.png" alt="screenshot">
       <div class="py-6">
         <h1 class="pt-8 text-center text-4xl text-black">
-          Participate in the ETHX Token Sale</h1>
+          Participate in the CUE Token Sale</h1>
       </div>
     </section>
 
@@ -94,7 +93,7 @@
       <p>Balance: {{ this.balance }}</p>
     </div>
     <div class="text-3xl text-center w-full items-center justify-center pt-4 text-black">
-        Round <b>1</b> (<b>{{Math.round(this.price*1000)/1000}} ETHX / {{this.curCoin.sym}}</b>)
+        Round <b>1</b> (<b>{{Math.round(this.price*1000)/1000}} CUE / {{this.curCoin.sym}}</b>)
         <br/>
         <br/>
         <p class="text-xl text-gray-400">NEXT round (higher price) in&nbsp;</p>
@@ -142,7 +141,7 @@
       </div>
       <div v-else-if="!is_paused&&(networkId==1||networkId==56)" class="m-auto d-flex lg:w-2/6 bg-white p-4 rounded .shadow-2xl">
         <h2 class="block mb-4 px-6 font-bold text-left text-black">
-          Deposit below to purchase ETHX
+          Deposit below to purchase CUE
         </h2>
         <div class="mt-10 flex flex-row justify-between px-6">
           <h6 class="text-sm">Send</h6>
@@ -160,8 +159,8 @@
         </div>
         <div class="mt-2 flex flex-row items-center justify-between mb-6 px-6">
           <input class="appearance-none font-medium text-2xl py-1 rounded w-full  mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="0.0" v-model="recvAmount">
-          <img src="../assets/img/ethereumx-black.svg" height="20px" width="20px" />
-          <label class="ml-2 font-semibold text-xl">ETHX</label>
+          <img src="../assets/img/coin.png" height="25px" width="25px" />
+          <label class="ml-2 font-semibold text-xl">CUE</label>
 
         </div>
         <button class="w-full bg-purple-600 hover:bg-purple-600 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
@@ -180,7 +179,7 @@
         </div>
         <div class="mt-2 flex flex-row items-center justify-between mb-6 px-6">
           <input class="appearance-none font-medium text-2xl py-1 rounded w-full  mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="0.0" v-model="claimableAmount" disabled>
-          <img src="../assets/img/ethereumx-black.svg" height="20px" width="20px" />
+          <img src="../assets/img/coin.svg" height="25px" width="25px" />
           <label class="ml-2 font-semibold text-xl">ETHX</label>
         </div>
         <button class="w-full bg-purple-600 hover:bg-purple-600 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
@@ -209,7 +208,7 @@
           <div>
             <span
                 class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-red-600 bg-red-200">
-              {{this.soldAmount}} ETHX SOLD
+              {{this.soldAmount}} CUE SOLD
             </span>
           </div>
           <div class="text-right">
@@ -224,7 +223,7 @@
       </div>
     </section>
 
-    <Faq />
+    <!-- <Faq /> -->
     <Footer />
 
   </div>
@@ -235,18 +234,14 @@ import Web3 from "web3"
 import PresaleJson from "../../contracts/Presale.json"
 import EthxJson from "../../contracts/Ethx.json"
 import Footer from "./Footer"
-import Faq from "./Faq"
 import Detail from "./Detail"
 import Countdown from "./Countdown"
-import Toptext from "./Toptext"
 export default {
   name: 'Tokensale',
   components:{
     Footer,
-    Faq,
     Detail,
-    Countdown,
-    Toptext
+    Countdown
   },
   computed: {
     web3 () {
@@ -456,18 +451,4 @@ export default {
   }
 }
 </script>
-<style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-button[disabled="disabled"]{
-  cursor: not-allowed;
-  opacity: 0.8;
-}
-</style>

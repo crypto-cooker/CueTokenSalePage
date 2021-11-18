@@ -5,27 +5,27 @@
           <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
             <div class="p-8 text-center ">
               <p class="mb-2 text-xs md:text-base ">Total Cap</p>
-              <span class="text-3xl lg:text-4xl font-bold font-heading">500k</span>
+              <span class="text-3xl lg:text-4xl font-bold font-heading">100m</span>
             </div>
           </div>
           <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
             <div class="p-8 text-center ">
               <p class="mb-2 text-xs md:text-base ">Private Presale</p>
-              <span class="text-3xl lg:text-4xl font-bold font-heading">25k</span>
+              <span class="text-3xl lg:text-4xl font-bold font-heading">1m</span>
             </div>
           </div>
           <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
             <div class="p-8 text-center ">
               <p class="mb-2 text-xs md:text-base ">Public Sale <span class="italic text-red-600">Live</span>
               </p>
-              <span class="text-3xl lg:text-4xl font-bold font-heading">250k</span>
+              <span class="text-3xl lg:text-4xl font-bold font-heading">10m</span>
             </div>
           </div>
           <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
             <div class="p-8 text-center ">
 
               <p class="mb-2 text-xs md:text-base ">Total Supply</p>
-              <span class="text-3xl lg:text-4xl font-bold font-heading">500k ETHX</span>
+              <span class="text-3xl lg:text-4xl font-bold font-heading">100m CUE</span>
             </div>
           </div>
         </div>
